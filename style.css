@@ -1,0 +1,403 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.child {
+    max-width: 1200px;  
+    width: 90%;
+    margin: 0 auto;
+}
+body{
+    /* background-color: burlywood; */
+    font-size: 1.125rem;
+    font-family: 'Public Sans';
+    color:  hsl(233, 8%, 62%);
+    background-color: hsl(0, 0%, 98%);
+}
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5); /* shadow effect */
+  display: none; /* hidden by default */
+  z-index: 5;
+}
+h1,h2,h3{
+    font-weight: 400;
+    color: hsl(233, 26%, 24%);
+}
+h2{
+    font-size: 2rem;
+}
+h3{
+    font-size: 1.5rem;
+}
+a{
+    text-decoration: none;
+    font-weight: 300;
+    color:  hsl(233, 8%, 62%);
+
+}
+button{
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: 700;
+    background-image: linear-gradient(to top right,hsl(192, 69%, 51%),hsl(136, 64%, 51%));
+}
+a:hover , button:hover{
+    cursor: pointer;
+}
+ 
+ul{
+    list-style: none;
+}
+nav{
+    position: relative;
+   background-color: white;
+   z-index: 10;
+}
+
+/* navigation */
+nav>div{
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ul-nav{
+    display: flex;
+    gap: 30px;
+}
+.ul-nav a{
+    position: relative;
+}
+.hamburger{
+    display: none;
+}
+.mobnavmenu{
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    height: 14em;
+    justify-content: space-around;
+    border-radius: 8px;
+    width: 15em;
+    box-shadow: 1px 0px 5px 3px rgba(0,0,0,0.29);
+    position: fixed;
+    top: 5em;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%);
+    margin: 0 auto;
+    z-index: 1000;
+}
+.navtoggled{
+    display: flex;
+}
+
+/* hero-section */
+
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    padding-bottom: 8em;
+    /* border: solid; */
+}
+.hero-div{
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+}
+.hero-div1{ 
+    max-width: 450px;
+    margin:  3em 0;
+ }
+h1{
+ font-size: 2.5rem;
+ max-width: 400px;
+ margin-bottom: .5em;
+}
+.hero-div1 p{
+    line-height: 1.5;
+}
+.hero-button{
+    margin-top: 1.8em;
+}
+.mobsvg{
+    display: none;
+}
+
+.svgs {
+    position: relative;
+    flex: 1;
+    height: 29em;
+    /* border: solid ; */
+}
+
+.svg1 {
+    width: 45em;
+    height: 42em;
+    position: absolute;
+    top: -10em;
+    right: -15em; 
+}
+
+.svg2 {
+  width: 35em;
+  position: absolute;
+  top: -7em;
+  right: -14em;
+  z-index: 999;
+}
+
+/* section 2 */
+.digbanking{
+    background-color:  hsl(220, 16%, 96%);
+    z-index: 1;
+    margin-top: -8em;
+}
+.dig-div{
+    padding: 5em 0;
+}
+.dig-div1{
+    max-width: 650px;
+    padding-bottom: 3.5em;
+}
+.dig-div1 h2{
+   margin-bottom: .9em;
+}
+.dig-cards{
+    display: flex;
+    justify-content: space-between;
+ }
+.dig-cards div{
+ width: 23%;
+}
+.dig-cards div img{
+    margin-bottom: 2em;
+}
+.dig-cards div h3{
+    margin-bottom: .9em;
+}
+.dig-cards div p{
+    line-height: 1.5;
+}
+
+
+/* article */
+.article-div{
+    padding: 4em 0;
+}
+.article-div h2{
+    padding-bottom: 2em;
+}
+
+.article-cards{
+    display: flex;
+    justify-content: space-between;
+}
+.article-cards div {
+    background-color: white;
+    width: 23%;
+    border-radius: 8px;
+ }
+ .article-cards div :not(img){
+    padding-left: 20px;
+    padding-right: 20px;
+ }
+ .articles img{
+    width: 100%;
+    height: 200px;       
+    object-fit: cover;   
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+ }
+ .text{
+    padding-bottom: 20px;
+ }
+.auth{
+    font-size: .9rem;
+    padding: .9em 0;
+}
+.title-art{
+    font-size: 1.2rem;
+    padding-bottom: .5em;
+    color: hsl(233, 26%, 24%);
+    display: block;
+    font-weight: 400;
+}
+
+/* footer */
+
+.about{
+    background-color:hsl(233, 26%, 24%) ;
+}
+.aboutlinks a{
+    color: hsl(0, 0%, 98%);
+}
+.foot-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em 0;
+}
+.aboutlinks{
+     display: flex;
+     flex-direction: column;
+     gap: 1.75em;
+}
+.sociallogos{
+    display: flex;
+    justify-content: space-between;
+}
+.diglogo{
+    padding-bottom: 3em;
+}
+.footerbtn{
+    margin-bottom: 2em;
+    margin-left:10em ;
+}
+a:hover {
+    color: hsl(136, 64%, 51%)
+}
+button:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+    background-blend-mode: overlay;
+    transition: background-color 0.3s ease;
+ }
+.ul-nav a:hover{
+    color: hsl(233, 26%, 24%);
+}
+.ul-nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -19px;
+    width: 0%;
+    height: 2px;
+    background-color:hsl(136, 64%, 51%);
+    transition: width 0.3s ease;
+}
+
+.ul-nav a:hover::after {
+    width: 100%;
+}
+.hamburger:hover{
+ cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .ul-nav , .nav-but{
+    display: none; 
+  }
+  .hamburger {
+    display: inline-block; /* show hamburger icon */
+  }
+  .svgs{
+    display: none;
+  }
+  .hero-div{
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .hero-div1{
+    width: 100%;
+  }
+  .mobsvg{
+    width: 100%;
+    display: block;
+    height: 20em;
+    margin-bottom: 2em;
+   }
+  .mobsvg1{
+    position: absolute;
+    top:-4em;
+    right: 0em;
+    width: 100%;
+    height: 60%;
+    /* height: 20em; */
+  }
+  .mobsvg2{
+    position: absolute;
+    top:-7em;
+    right: 0em;
+    width: 100%;
+    height: 60%;
+     
+  }
+    .dig-cards{
+        flex-direction: column;
+        gap: 15px;
+    }
+    .dig-cards div{
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .article-cards{
+        flex-direction: column;
+        gap: 15px;
+    }
+    .article-cards div {
+        text-align: left;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .aboutlinks {
+        gap: 10px !important;
+        padding: 5px;
+    }
+    .foot-div{
+        flex-direction: column;
+        text-align: center;
+    }
+    .footerbtn{
+        margin-top: 2em;
+        margin-left:0em ;
+    }
+    .diglogo{
+        padding-bottom: 2em;
+    }
+    .sociallogos{
+        margin-bottom: 1.7em;
+    }
+
+    }
+
+@media (max-width: 400px) {
+    body{
+        text-align: center;
+    }
+   .dig-cards{
+        flex-direction: column;
+        gap: 15px;
+    }
+    .dig-cards div{
+        width: 100%;
+
+    }
+
+    .article-cards{
+        flex-direction: column;
+        gap: 15px;
+    }
+    .article-cards div {
+        text-align: left;
+        width: 100%;
+    }
+
+}
